@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل الموعد</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+      body {
+        font-family: "Cairo", Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .header {
+        background: url("https://shwra-qa-be.azurewebsites.net/api/Files/DownloadFile?fileName=f20240bf-c931-40d2-ba43-63febaf5426c.png");
+        text-align: right;
+        padding: 30px;
+      }
+      .header img {
+        width: 200px;
+      }
+      .content {
+        color: #333;
+        text-align: right;
+        padding: 30px;
+      }
+      .content h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .content p {
+        font-size: 16px;
+        margin: 5px 0 15px;
+      }
+      .button-container {
+        margin: 20px 0;
+      }
+      .button-container a {
+        background-color: #d7a85b;
+        color: #fff;
+        padding: 8px 25px;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 16px;
+        display: inline-block;
+      }
+      .footer {
+        padding: 15px 30px;
+        color: #888;
+        font-size: 14px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .icon-footer {
+        width: 30px;
+        padding-left: 5px;
+      }
+      .icon-footer-shwra {
+        width: 150px;
+        padding-right: 10px;
+        transform: translateY(40px);
+      }
+      .body-text {
+        text-align: center;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+      .data {
+        padding-top: 15px;
+      }
+      .social-icons td {
+        text-align: left;
+      }
+
+      .icon-link {
+        display: inline-block;
+        margin: 0 10px; /* Adds spacing between the icons */
+      }
+
+      .icon-footer {
+        width: 30px; /* Set icon size */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <table>
+        <tr>
+          <td class="header">
+            <img
+              src="https://shwra-qa-be.azurewebsites.net/api/Files/DownloadFile?fileName=cba3fc40-76df-4a98-9ea2-cd04f72503c2.png"
+              alt="Header Image"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 30px 30px 0; text-align: right">
+            <h1 dir="rtl" style="margin: 0">
+              <span>مرحبا </span
+              ><span style="font-weight: bold">{{CustomerName}}</span
+              ><span>,</span>
+            </h1>
+          </td>
+        </tr>
+        <tr>
+          <td class="content" style="color: gray">
+            <p style="margin-top: 0">
+              تم جدولة العرض التوضيحي بنجاح. وهذه هي تفاصيل موعدك :
+            </p>
+            <div style="margin-top: 30px">
+              <span style="margin-top: 40px; font-size: 20px"
+                >تاريخ الاجتماع:</span
+              >
+              <span style="margin-top: 0; font-size: 20px; font-weight: bold">
+                {{AppointmentDate}}
+              </span>
+            </div>
+
+            <div style="margin-top: 10px">
+              <span style="margin-top: 0; font-size: 20px">وقت الاجتماع:</span>
+              <span style="margin-top: 0; font-size: 20px; font-weight: bold"
+                >{{AppointmentTime}}
+              </span>
+            </div>
+
+            <div style="margin-top: 10px">
+              <span style="margin-top: 0; font-size: 20px">منصة الاجتماع:</span>
+              <span style="margin-top: 0; font-size: 20px; font-weight: bold">
+                {{MeetingType}}
+              </span>
+            </div>
+
+            <div dir="rtl" class="button-container">
+              <a href="{{ZoomMeetingLink}}">الانضمام إلى ZOOM</a>
+            </div>
+            <p class="body-text">
+              إذا كان لديك أي أسئلة أو تحتاج إلى إعادة جدولة موعدك، فلا تتردد في
+              التواصل معانا عن طريق
+            </p>
+            <p class="body-text">
+              <span style="color: #d7a85b"> info@shwra.sa </span>أو
+              <span style="color: #d7a85b"> 920033635 </span>
+            </p>
+            <p>شورى لحل كل مشاكلك القانونية</p>
+            <p>أطيب التحيات،</p>
+            <p>منصة شورى للخدمات القانونية</p>
+          </td>
+        </tr>
+      </table>
+      <table style="width: 100%; table-layout: fixed">
+        <tr>
+          <td style="width: 40%; text-align: center; padding: 20px">
+            <!-- Social Media Icons -->
+            <a
+              href="https://www.facebook.com/people/%D8%B4%D9%88%D8%B1%D9%89-Shwra/61553127944298/?mibextid=LQQJ4d"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon-link"
+              style="width: 10%; display: inline-block"
+            >
+              <img
+                class="icon-footer"
+                src="https://shwra-qa-be.azurewebsites.net/api/Files/DownloadFile?fileName=e1b26eff-1e4e-41c4-b4c5-5838a4f668aa.png"
+                alt="Facebook"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
+            <a
+              href="https://instagram.com/shwraapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon-link"
+              style="width: 10%; display: inline-block"
+            >
+              <img
+                class="icon-footer"
+                src="https://shwra-qa-be.azurewebsites.net/api/Files/DownloadFile?fileName=e87336d4-7e53-428e-b59f-1ed4a101811e.png"
+                alt="Instagram"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/shwraapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon-link"
+              style="width: 10%; display: inline-block"
+            >
+              <img
+                class="icon-footer"
+                src="https://shwra-qa-be.azurewebsites.net/api/Files/DownloadFile?fileName=b7f3cd6c-b35e-43b0-b34c-7912c929112e.png"
+                alt="LinkedIn"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
+            <a
+              href="https://twitter.com/shwraapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="icon-link"
+              style="width: 10%; display: inline-block"
+            >
+              <img
+                class="icon-footer"
+                src="https://shwra-qa-be.azurewebsites.net/api/Files/DownloadFile?fileName=4cce80f8-66cb-4b34-8489-e46cf87a77a1.png"
+                alt="Twitter"
+                style="max-width: 100%; height: auto"
+              />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
